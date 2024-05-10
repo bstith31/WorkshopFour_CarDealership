@@ -4,12 +4,14 @@ import java.util.ArrayList;
 
 public class Dealership {
 
+    //ArrayList <Vehicle> = new ArrayList<>()
+
     private String name;
     private String address;
     private String phone;
-    private ArrayList <Vehicle> inventory;
+    private ArrayList <Vehicle> inventory ;
 
-    public Dealership(String name, String address, String phone) {
+    public Dealership() {
         this.name = name;
         this.address = address;
         this.phone = phone;
@@ -87,4 +89,12 @@ public class Dealership {
     public ArrayList<Vehicle> getVehicleByType(String vehicleType){
         return null;
     }
+
+    public ArrayList<Vehicle> getInventory() {
+        return inventory;
+    }
+
+//    public void setInventory(Vehicle[] inventory) {
+//        this.inventory = inventory;
+//    }
 }

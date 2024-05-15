@@ -1,7 +1,6 @@
 package com.ps;
 
 public class Vehicle {
-
     private int vin;
     private int year;
     private String make;
@@ -89,7 +88,8 @@ public class Vehicle {
     @Override
     public String toString() {
         return "Vehicle{" +
-                "year=" + year +
+                "vin=" + vin +
+                ", year=" + year +
                 ", make='" + make + '\'' +
                 ", model='" + model + '\'' +
                 ", vehicleType='" + vehicleType + '\'' +

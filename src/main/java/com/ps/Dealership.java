@@ -53,7 +53,7 @@ public class Dealership {
     }
 
     //addVehicle
-    public ArrayList<Vehicle> addVehicle() {
+    public ArrayList<Vehicle> addVehicle(Vehicle vehicle) {
 //        this.inventory.add();
         return null;
     }

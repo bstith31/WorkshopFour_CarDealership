@@ -64,7 +64,7 @@ public class Dealership {
     }
 
     //removeVehicle
-    public void removeVehicle(int vehicleIndex){
+    public void removeVehicle(Vehicle vehicleIndex){
         this.inventory.remove(vehicleIndex);
     }
 

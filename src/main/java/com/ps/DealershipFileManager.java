@@ -4,16 +4,17 @@ import java.io.*;
 
 public class DealershipFileManager {
 
-//    static final String fileName = "inventory.csv";
-//    static final String backupFileName = "backup_inventory.csv";
+static final String fileName = "inventory.csv";
+static final String backupFileName = "backup_inventory.csv";
+
 public Dealership getDealership() {
     Dealership dealership = new Dealership();
     try {
         BufferedReader bufReader = new BufferedReader(new FileReader("inventory.csv"));
         String line;
-        bufReader.readLine(); // Skipping header
+        bufReader.readLine();
         while ((line = bufReader.readLine()) != null) {
-            String[] dealershipInfo = line.split("\\|"); // Escaping |
+            String[] dealershipInfo = line.split("\\|");
             int vin = Integer.parseInt(dealershipInfo[0]);
             int year = Integer.parseInt(dealershipInfo[1]);
             String make = dealershipInfo[2];

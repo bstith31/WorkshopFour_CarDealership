@@ -1,6 +1,7 @@
 package com.ps;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -35,7 +36,7 @@ public class UserInterface {
                     // processGetAllVehiclesRequest();
                     break;
                 case "2":
-                    // processGetVehiclesByPriceRequest();
+                    processGetVehiclesByPriceRequest();
                     break;
                 case "3":
                     // processAddVehicleRequest();
@@ -51,5 +52,16 @@ public class UserInterface {
             }
         } while (!mainMenuInput.equals("5"));
     }
-}
 
+    public static void processGetVehiclesByPriceRequest() {
+        System.out.println("Please give me a min price");
+        float minValue = scanner.nextFloat();
+        System.out.println("Please give me a max price");
+        float maxValue = scanner.nextFloat();
+
+        ArrayList<Vehicle> vehiclesByPrice = dealership.getVehiclesByPrice(minValue, maxValue);
+        for (Vehicle vehicle : vehiclesByPrice) {
+            System.out.println(vehicle);
+        }
+    }
+}

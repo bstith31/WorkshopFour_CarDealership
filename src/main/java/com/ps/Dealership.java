@@ -53,41 +53,48 @@ public class Dealership {
     }
 
     //addVehicle
-    public ArrayList<Vehicle> addVehicle(Vehicle vehicle) {
-//        this.inventory.add();
-        return null;
+    public void addVehicle(Vehicle vehicle){
+        this.inventory.add(vehicle);
     }
 
 
     //getAllVehicle
-    public ArrayList<Vehicle> getAllVehicle() {
+    public ArrayList<Vehicle> getAllVehicles() {
         return this.inventory;
     }
 
     //removeVehicle
-    public ArrayList<Vehicle> removeVehicle() {
-//          this.inventory.remove();
-          return null;
-       }
+    public void removeVehicle(int vehicleIndex){
+        this.inventory.remove(vehicleIndex);
+    }
 
     //Search Vehicles by categories
-    public ArrayList<Vehicle> getVehicleByPrice(int price){
-        return null;
+    public ArrayList<Vehicle> getVehiclesByPrice(float min, float max) {
+        ArrayList<Vehicle> vehiclesToDisplay = new ArrayList<>();
+
+        for(Vehicle vehicle: this.inventory){
+            if(vehicle.getPrice() > min && vehicle.getPrice() < max){
+                vehiclesToDisplay.add(vehicle);
+            }
+        }
+
+        return vehiclesToDisplay;
     }
-    public ArrayList<Vehicle> getVehicleByMakeModel(String make, String model){
-        return null;
+
+    public ArrayList<Vehicle> getVehiclesByMakeModel(String make, String model) {
+        return new ArrayList<>();
     }
-    public ArrayList<Vehicle> getVehicleByYear(int year){
-        return null;
+    public ArrayList<Vehicle> getVehiclesByYear(int year) {
+        return new ArrayList<>();
     }
-    public ArrayList<Vehicle> getVehicleByColor(String color){
-        return null;
+    public ArrayList<Vehicle> getVehiclesByColor(String color) {
+        return new ArrayList<>();
     }
     public ArrayList<Vehicle> getVehicleByMileage(int mileage){
         return null;
     }
-    public ArrayList<Vehicle> getVehicleByType(String vehicleType){
-        return null;
+    public ArrayList<Vehicle> getVehiclesByType(String vehicleType) {
+        return new ArrayList<>();
     }
 
     public ArrayList<Vehicle> getInventory() {
